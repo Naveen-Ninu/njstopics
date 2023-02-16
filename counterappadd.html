@@ -9,11 +9,10 @@
     <link rel="icon" href="/assets/image/png/js_logo.png" />
     <!-- css-files link -->
     <link rel="stylesheet" href="assets/style/common.css" />
-    <link rel="stylesheet" href="assets/style/style.css" />
     <!-- bootstrap-css-link  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
-    <title>counter-app</title>
+    <title>counter</title>
 </head>
 
 <body>
@@ -23,22 +22,17 @@
                 <div class="col-12 align-items-center">
                     <h1 class="heading">Counter App</h1>
                     <div class="box m-auto p-4">
-                        <p id=" counter" class="counter zero pt-5">0</p>
+                        <p id="counter-preview" class="counter-preview zero pt-5">0</p>
                         <div class="text-center mt-4">
-                            <button id="plus" onclick="changeCounter(plus)" class="btn_addone">
+                            <button id="add_one" class="common_btn">
                                 Add one
                             </button>
-                            <button id="reset" onclick="changeCounter(reset)" class="btn_addone mx-1">
-                                Re-set
-                            </button>
-                            <button id="minus" onclick="changeCounter(minus)" class="btn_addone">
-                                Minus one
-                            </button>
-                            <!-- <input type="number" id="numbers" value="0" min="0" /> -->
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div>
         </div>
     </section>
     <!-- BOOTSTRAP-JS-LINK  -->
@@ -46,31 +40,15 @@
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
     <script>
-        var counter = document.querySelector(".counter");
-        let count = 0;
-        function changeCounter(button) {
-            if (button == plus) {
-                count += 1;
-            } else if (button == minus) {
-                if (count > 0) {
-                    count -= 1;
-                }
-            } else if (button == reset) {
-                count = 0;
-            }
-            counter.innerHTML = count;
-        }
-    </script>
-    <!--=-=--==-=-=-=-==-=-=-=- 2nd tarika =-=--==-=only for use in  input -=-=-==-=-=-=-==-=-=-=- -->
-    <!-- <script>
-      function stepPlus() {
-        document.getElementById("numbers").stepUp();
-      }
+        const preview = document.getElementById("counter-preview")
+        const add = document.getElementById("add_one")
 
-      function stepMinus() {
-        document.getElementById("numbers").stepDown();
-      }
-    </script > -->
+        let value = 0;
+        add.addEventListener("click", function () {
+            value = value + 1;
+            preview.innerHTML = value;
+        });
+    </script>
 </body>
 
 </html>
