@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- -Favicon-link  -->
+    <link rel="icon" href="/assets/image/png/js_logo.png" />
+    <!-- css-files link -->
+    <link rel="stylesheet" href="assets/style/common.css" />
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <!-- bootstrap-css-link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <title>text-editor</title>
+    <style>
+        .gray {
+            color: #808080 !important;
+        }
+
+        select:focus {
+            box-shadow: none !important;
+            border-color: #808080 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="d-flex vh-100">
+        <div class="container justify-content-center align-self-center">
+            <div class="row">
+                <div class="col-12 align-items-center">
+                    <h1 class="heading">Text Editor</h1>
+                    <div class="box m-auto p-4">
+                        <h1 class="heading text-dark mb-4 py-3">This is sample text.</h1>
+                        <div class="">
+                            <select class="form-select p-3" aria-label="Default select example">
+                                <option selected class="gray">Select color</option>
+                                <option value="1">Red</option>
+                                <option value="2">Black</option>
+                                <option value="3">Green</option>
+                            </select>
+                        </div>
+                        <div class="my-1">
+                            <select class="form-select p-3" aria-label="Default select example">
+                                <option selected class="gray">Select font size</option>
+                                <option value="1">fs-10px</option>
+                                <option value="2">fs-20px</option>
+                                <option value="3">fs-30px</option>
+                            </select>
+                        </div>
+                        <div class="">
+                            <select class="form-select p-3" aria-label="Default select example">
+                                <option selected class="gray">Select alignment</option>
+                                <option value="1">Right</option>
+                                <option value="2">Left</option>
+                                <option value="3">Center</option>
+                            </select>
+                        </div>
+
+                        <div class="my-1">
+                            <select class="form-select p-3" aria-label="Default select example">
+                                <option selected class="gray">Select font family</option>
+                                <option value="1">Poppins</option>
+                                <option value="2">Inter</option>
+                                <option value="3">Sans</option>
+                            </select>
+                        </div>
+                        <div class="">
+                            <select class="form-select p-3" aria-label="Default select example">
+                                <option selected class="gray">Select text decoration</option>
+                                <option value="1">Poppins</option>
+                                <option value="2">Inter</option>
+                                <option value="3">Sans</option>
+                            </select>
+                        </div>
+                        <div class="mt-1">
+                            <select class="form-select p-3" aria-label="Default select example">
+                                <option selected class="gray">Select font weight</option>
+                                <option value="1">Normal</option>
+                                <option value="2">Semi-bold</option>
+                                <option value="3">Bold</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOTSTRAP-JS-LINK  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
