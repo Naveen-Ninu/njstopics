@@ -28,7 +28,6 @@
             overflow-x: hidden;
         }
 
-
         div.banner {
             width: 100%;
             min-height: 100vh;
@@ -77,41 +76,30 @@
             }
         }
 
-
-
-        /* Using box shadows to create 3D effects */
         #calculator {
             width: 325px;
             height: auto;
             font: bold 14px Arial, sans-serif;
             margin: 100px auto;
             padding: 20px 20px 9px;
-
             background: #9dd2ea;
             background: linear-gradient(#9dd2ea, #8bceec);
             border-radius: 3px;
             box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
         }
 
-        /* Top portion */
         .top span.clear {
             float: left;
         }
 
-        /* Inset shadow on the screen to create indent */
         .top .screen {
             height: 40px;
             width: 212px;
-
             float: right;
-
             padding: 0 10px;
-
             background: rgba(0, 0, 0, 0.2);
             border-radius: 3px;
             box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
-
-            /* Typography */
             font-size: 17px;
             line-height: 40px;
             color: white;
@@ -120,43 +108,30 @@
             letter-spacing: 1px;
         }
 
-        /* Clear floats */
         .keys,
         .top {
             overflow: hidden;
         }
 
-        /* Applying same to the keys */
         .keys span,
         .top span.clear {
             float: left;
             position: relative;
             top: 0;
-
             cursor: pointer;
-
             width: 66px;
             height: 36px;
-
             background: white;
             border-radius: 3px;
             box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
-
             margin: 0 7px 11px 0;
-
             color: #888;
             line-height: 36px;
             text-align: center;
-
-            /* prevent selection of text inside keys */
             user-select: none;
-
-            /* Smoothing out hover and active states using css3 transitions */
             transition: all 0.2s ease;
         }
 
-        /* Remove right margins from operator keys */
-        /* style different type of keys (operators/evaluate/clear) differently */
         .keys span.operator {
             background: #FFF0F5;
             margin-right: 0;
@@ -174,7 +149,6 @@
             color: white;
         }
 
-        /* Some hover effects */
         .keys span:hover {
             background: #9c89f6;
             box-shadow: 0px 4px #6b54d3;
@@ -193,7 +167,6 @@
             color: white;
         }
 
-        /* Simulating "pressed" effect on active state of the keys by removing the box-shadow and moving the keys down a bit */
         .keys span:active {
             box-shadow: 0px 0px #6b54d3;
             top: 4px;
@@ -226,17 +199,19 @@
                         </li>
                         <li class="nav-item"> <a class="nav-link" href="/simplecalculator.html">Simple
                                 Calculator</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="#">Advance Calculator</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="/advancecalculator.html">Advance Calculator</a>
+                        </li>
                         <li class="nav-item"> <a class="nav-link" href="/texteditor.html">Text Editor</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="/accordian.html">Accordian</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="/tabs.html">Tabs</a> </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
     <div class="banner">
-        <h1>Js Topiks </h1>
-        <h2>subtitle</h2>
+        <h1>Js Topics </h1>
+        <h2>links</h2>
     </div>
     <div class="content-area">
         <!--Your calculator here-->

@@ -13,10 +13,10 @@
     <!-- bootstrap-css-link  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
-    <title>counter-add-min-reset</title>
+    <title>Advance Calculator</title>
     <style>
-        .simple_calculator_box {
-            width: 540px;
+        .advance_calculator_box {
+            width: 546px;
             left: 490px;
             top: 441px;
             border-radius: 20px;
@@ -31,15 +31,52 @@
             background: transparent;
         }
 
-        input {
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            padding: 20px;
-        }
-
         .previews_stype {
             border: 1px solid rgba(0, 0, 0, 0.1);
             border-radius: 5px;
+        }
+
+        .common_btn_bg {
+            background: linear-gradient(127.28deg, #EBEBEB 12.53%, #FFFFFF 86.52%);
+            border-radius: 3px;
+            width: 83px;
+            height: 77px;
+        }
+
+        .common_btn_bg:hover {
+            background: linear-gradient(97.42deg, #128DFF -4.95%, #1444EF 109.04%);
+        }
+
+        .common_btn_bg:hover button {
+            color: #FFFFFF !important;
+        }
+
+        .common_btn_bg:hover button svg path {
+            fill: #FFFFFF !important;
+        }
+
+        .equal_btn_bg:hover {
+            background: linear-gradient(97.42deg, #128DFF -4.95%, #1444EF 109.04%);
+        }
+
+        .equal_btn_bg:hover button {
+            color: #FFFFFF !important;
+        }
+
+        .equal_btn_bg {
+            background: linear-gradient(127.28deg, #EBEBEB 12.53%, #FFFFFF 86.52%);
+            border-radius: 3px;
+            width: 83px;
+            height: 154px;
+        }
+
+        .gray {
+            color: #808080;
+        }
+
+        .btn_num {
+            border: none;
+            background: transparent;
         }
     </style>
 </head>
@@ -49,29 +86,98 @@
         <div class="container justify-content-center align-self-center">
             <div class="row">
                 <div class="col-12 align-items-center">
-                    <h1 class="heading">Simple Calculator</h1>
-                    <div class="simple_calculator_box m-auto p-4">
+                    <h1 class="heading mb-4 pb-1">Advance Calculator</h1>
+                    <div class="advance_calculator_box m-auto p-4">
                         <div class="previews_stype p-3 mb-2">
-                            <p id=" counter" class="counter text-start zero font-sm opacity-25 fw-normal">2 + 5</p>
-                            <p id=" zero" class="counter text-start zero">0</p>
+                            <p id=" counter" class="counter text-start zero font-sm opacity-25 fw-normal mb-0">2 + 5</p>
+                            <p id=" counter" class="counter text-start zero font-sm opacity-25 fw-normal mb-0">7</p>
+                            <p id=" counter" class="counter text-start zero font-sm opacity-25 fw-normal mb-0">7 + 8</p>
+                            <p id=" zero" class="counter text-start zero mb-0 mt-2">15</p>
                         </div>
-                        <input id="first" type="number" value="" class="w-100" placeholder="Enter first value">
-                        <input id="second" type="number" value="" class="w-100 mt-2" placeholder="Enter second value">
-                        <div class="text-center mt-4">
-                            <button id="plus" onclick="changeCounter(plus)" class="btn_outline">
-                                +
-                            </button>
-                            <button id="minus" onclick="changeCounter(plus)" class="btn_outline">
-                                - </button>
-                            <button id="multiply" onclick="changeCounter(plus)" class="btn_outline">
-                                *
-                            </button>
-                            <button id="devide" onclick="changeCounter(reset)" class="btn_outline mx-1">
-                                /
-                            </button>
-                            <button id="clear" onclick="changeCounter(minus)" class="common_btn py-3 px-5">
-                                Clear
-                            </button>
+                        <div class="d-flex pt-3 flex-wrap">
+                            <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button class="border-none btn_num gray">7</button>
+                            </div>
+                            <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button class="border-none btn_num gray">8</button>
+                            </div>
+                            <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button class="border-none btn_num gray">9</button>
+                            </div>
+                            <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button class="border-none btn_num gray">+</button>
+                            </div>
+                            <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button class="border-none btn_num gray">^</button>
+                            </div>
+                            <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button class="border-none btn_num gray"><svg width="21" height="17" viewBox="0 0 21 17"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.3 0.5H20.5V16.5H5.3L0.5 8.5L5.3 0.5Z" fill="#808080" />
+                                        <path
+                                            d="M11.7626 7.15065L13.977 3.5H15.9699L12.7038 8.44455L16.0714 13.5H14.097L11.7903 9.75693L9.4837 13.5H7.5L10.8677 8.44455L7.60149 3.5H9.57596L11.7626 7.15065Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button class="border-none btn_num gray">4</button>
+                            </div>
+                            <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button class="border-none btn_num gray">5</button>
+                            </div>
+                            <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button class="border-none btn_num gray">6</button>
+                            </div>
+                            <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button class="border-none btn_num gray">-</button>
+                            </div>
+                            <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button class="border-none btn_num gray">1/X</button>
+                            </div>
+                            <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button class="border-none btn_num gray">C</button>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="d-flex flex-wrap">
+                                <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                    <button class="border-none btn_num gray">1</button>
+                                </div>
+                                <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                    <button class="border-none btn_num gray">2</button>
+                                </div>
+                                <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                    <button class="border-none btn_num gray">3</button>
+                                </div>
+                                <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                    <button class="border-none btn_num gray">*</button>
+                                </div>
+                                <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                    <button class="border-none btn_num gray">%</button>
+                                </div>
+                                <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                    <button class="border-none btn_num gray">00</button>
+                                </div>
+                                <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                    <button class="border-none btn_num gray">0</button>
+                                </div>
+                                <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                    <button class="border-none btn_num gray">.</button>
+                                </div>
+                                <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                    <button class="border-none btn_num gray">/</button>
+                                </div>
+                                <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                    <button class="border-none btn_num gray">!</button>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-center align-content-center equal_btn_bg">
+                                    <button class="border-none btn_num  gray">=</button>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
