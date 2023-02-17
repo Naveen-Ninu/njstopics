@@ -56,8 +56,8 @@
                     <h1 class="heading">Simple Calculator</h1>
                     <div class="simple_calculator_box m-auto p-4">
                         <div class="previews_ stype mb-2">
-                            <!-- <p class="py-3 ps-2 previews_stype" id="answer">0</p> -->
-                            <input type="text" class=" w-100 py-" placeholder="0" name="" id="answer">
+                            <p class="py-3 ps-2 previews_stype" id="answer">0</p>
+                            <!-- <input type="text" class=" w-100 py-" placeholder="0" name="" id="answer"> -->
 
                         </div>
                         <input id="first" type="number" value="" class="w-100" placeholder="Enter first value">
@@ -80,68 +80,76 @@
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
     <script>
-        // const firstInput = document.getElementById("first")
-        // const secondInput = document.getElementById("second")
-        // const answerInput = document.getElementById("answer")
-        // let count = 0
-        // function add() {
-        //     count = Number(firstInput.value) + Number(secondInput.value);
-        //     answerInput.innerHTML = count
-        // }
-        // function minus() {
-        //     count = Number(firstInput.value) - Number(secondInput.value);
-        //     answerInput.innerHTML = count
-        // }
-        // function multiple() {
-        //     count = Number(firstInput.value) * Number(secondInput.value);
-        //     answerInput.innerHTML = count
-        // }
-        // function devide() {
-        //     count = Number(firstInput.value) / Number(secondInput.value);
-        //     answerInput.innerHTML = count
-        // }
-        // function reset() {
-        //     firstInput.value = ""
-        //     secondInput.value = ""
-        //     answerInput.innerHTML = ""
-        // }
+        const firstInput = document.getElementById("first")
+        const secondInput = document.getElementById("second")
+        const answerInput = document.getElementById("answer")
+        let count = 0
+        function add() {
+            count = Number(firstInput.value) + Number(secondInput.value);
+            answerInput.innerHTML = count
+            firstInput.value = ""
+            secondInput.value = ""
+        }
+        function minus() {
+            count = Number(firstInput.value) - Number(secondInput.value);
+            answerInput.innerHTML = count
+            firstInput.value = ""
+            secondInput.value = ""
+        }
+        function multiple() {
+            count = Number(firstInput.value) * Number(secondInput.value);
+            answerInput.innerHTML = count
+            firstInput.value = ""
+            secondInput.value = ""
+        }
+        function devide() {
+            count = Number(firstInput.value) / Number(secondInput.value);
+            answerInput.innerHTML = count
+            firstInput.value = ""
+            secondInput.value = ""
+        }
+        function reset() {
+            firstInput.value = ""
+            secondInput.value = ""
+            answerInput.innerHTML = 0
+        }
     </script>
 
     <!-- 2nd tarika is this  -->
 
     <script>
-        function add() {
-            a = Number(document.getElementById("first").value);
-            b = Number(document.getElementById("second").value);
-            c = a + b;
-            document.getElementById("answer").value = c;
-        }
-        function minus() {
-            a = Number(document.getElementById("first").value);
-            b = Number(document.getElementById("second").value);
-            c = a - b;
-            document.getElementById("answer").value = c;
-        }
-        function multiple() {
-            a = Number(document.getElementById("first").value);
-            b = Number(document.getElementById("second").value);
-            c = a * b;
-            document.getElementById("answer").value = c;
-        }
-        function devide() {
-            a = Number(document.getElementById("first").value);
-            b = Number(document.getElementById("second").value);
-            c = a / b;
-            document.getElementById("answer").value = c;
-        }
-        function reset() {
-            document.getElementById("answer").value = c;
-            c = ""
-            document.getElementById("first").value = b;
-            a = ""
-            document.getElementById("second").value = a;
-            b = ""
-        }      
+        // function add() {
+        //     a = Number(document.getElementById("first").value);
+        //     b = Number(document.getElementById("second").value);
+        //     c = a + b;
+        //     document.getElementById("answer").value = c;
+        // }
+        // function minus() {
+        //     a = Number(document.getElementById("first").value);
+        //     b = Number(document.getElementById("second").value);
+        //     c = a - b;
+        //     document.getElementById("answer").value = c;
+        // }
+        // function multiple() {
+        //     a = Number(document.getElementById("first").value);
+        //     b = Number(document.getElementById("second").value);
+        //     c = a * b;
+        //     document.getElementById("answer").value = c;
+        // }
+        // function devide() {
+        //     a = Number(document.getElementById("first").value);
+        //     b = Number(document.getElementById("second").value);
+        //     c = a / b;
+        //     document.getElementById("answer").value = c;
+        // }
+        // function reset() {
+        //     document.getElementById("answer").value = c;
+        //     c = ""
+        //     document.getElementById("first").value = b;
+        //     a = ""
+        //     document.getElementById("second").value = a;
+        //     b = ""
+        // }      
     </script>
 </body>
 
