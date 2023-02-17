@@ -42,11 +42,11 @@
     <script>
         const preview = document.getElementById("counter-preview")
         const add = document.getElementById("add_one")
-
         let value = 0;
         add.addEventListener("click", function () {
-            value = value + 1;
+
             preview.innerHTML = value;
+            if (value < 10) { value = value + 1; }
         });
     </script>
 </body>
