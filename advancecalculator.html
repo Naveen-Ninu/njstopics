@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- -Favicon-link  -->
+    <link rel="icon" href="/assets/image/png/js_logo.png" />
+    <!-- css-files link -->
+    <link rel="stylesheet" href="assets/style/common.css" />
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <!-- bootstrap-css-link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <title>counter-add-min-reset</title>
+    <style>
+        .simple_calculator_box {
+            width: 540px;
+            left: 490px;
+            top: 441px;
+            border-radius: 20px;
+            background: #ffffff;
+            box-shadow: 0px 11px 44px -10px rgba(0, 0, 0, 0.25);
+        }
+
+        .btn_outline {
+            border: 1px solid #128DFF;
+            border-radius: 4px;
+            padding: 15px 35px;
+            background: transparent;
+        }
+
+        input {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .previews_stype {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="d-flex vh-100">
+        <div class="container justify-content-center align-self-center">
+            <div class="row">
+                <div class="col-12 align-items-center">
+                    <h1 class="heading">Simple Calculator</h1>
+                    <div class="simple_calculator_box m-auto p-4">
+                        <div class="previews_stype p-3 mb-2">
+                            <p id=" counter" class="counter text-start zero font-sm opacity-25 fw-normal">2 + 5</p>
+                            <p id=" zero" class="counter text-start zero">0</p>
+                        </div>
+                        <input id="first" type="number" value="" class="w-100" placeholder="Enter first value">
+                        <input id="second" type="number" value="" class="w-100 mt-2" placeholder="Enter second value">
+                        <div class="text-center mt-4">
+                            <button id="plus" onclick="changeCounter(plus)" class="btn_outline">
+                                +
+                            </button>
+                            <button id="minus" onclick="changeCounter(plus)" class="btn_outline">
+                                - </button>
+                            <button id="multiply" onclick="changeCounter(plus)" class="btn_outline">
+                                *
+                            </button>
+                            <button id="devide" onclick="changeCounter(reset)" class="btn_outline mx-1">
+                                /
+                            </button>
+                            <button id="clear" onclick="changeCounter(minus)" class="common_btn py-3 px-5">
+                                Clear
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BOOTSTRAP-JS-LINK  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script>
+        const plus = document.getElementById("plus")
+        const second = document.getElementById("second")
+        const first = document.getElementById("first")
+        const zero = document.getElementById("zero")
+        let count = 0
+        console.log(first.value, "10")
+        plus.addEventListener("click", function () {
+            count.number(first + second)
+        })
+        zero.innerHTML = zero;
+
+    </script>
+</body>
+
+</html>
