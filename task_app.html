@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- -Favicon-link  -->
+    <link rel="shortcut icon" href="./assets/images/png/js-logo.png" type="image/x-icon">
+    <!-- css-files link -->
+    <link rel="stylesheet" href="assets/style/common.css" />
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <!-- bootstrap-css-link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <title>Task App</title>
+    <style>
+        .prev_btn {
+            border: 1px solid #128DFF;
+            border-radius: 4px;
+            color: #128DFF;
+            border-radius: 4px;
+            padding: 13px 35px;
+            background: transparent;
+        }
+
+        .prev_btn:hover {
+            color: #ffffff;
+            background: linear-gradient(97.42deg, #128DFF -4.95%, #1444EF 109.04%);
+        }
+
+        .next_btn {
+            background: linear-gradient(97.42deg, #128DFF -4.95%, #1444EF 109.04%);
+            border-radius: 4px;
+            padding: 13px 50px;
+            border: none;
+        }
+
+        .next_btn:hover {
+            background: linear-gradient(97.42deg, #1444EF -4.95%, #128DFF 109.04%);
+            border-radius: 4px;
+            padding: 13px 50px;
+        }
+
+        .task_box {
+            width: 540px;
+            left: 490px;
+            top: 441px;
+            border-radius: 20px;
+            background: #ffffff;
+            box-shadow: 0px 11px 44px -10px rgba(0, 0, 0, 0.25);
+        }
+
+        .fw_500 {
+            font-weight: 500;
+        }
+
+        .gray {
+            color: #808080;
+        }
+
+        /* .outline:hover {
+            border: 1px solid #128dff
+        } */
+
+        .outline:hover path {
+            fill: #000000 !important;
+        }
+
+        .outline {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 22px 19px;
+            margin-bottom: 8px;
+        }
+
+        .add_btn:hover {
+            background: linear-gradient(97.42deg, #1444EF -4.95%, #128DFF 109.04%);
+        }
+
+        .add_btn {
+            font-size: 16px;
+            font-weight: 600;
+            background: linear-gradient(97.42deg, #128DFF -4.95%, #1444EF 109.04%);
+            border-radius: 4px;
+            padding: 13px 34px;
+            border: none;
+            top: 10%;
+            right: 2%;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="d-flex vh-100">
+        <div class="container justify-content-center align-self-center">
+            <div class="row">
+                <div class="col-12 align-items-center">
+                    <h1 class="heading mb-4 pb-1">Task App</h1>
+                    <div class="task_box m-auto">
+                        <div class="p-4">
+                            <div class="position-relative">
+                                <input class="outline w-100 mb-4" placeholder="Add your task here..." type="text">
+                                <button class="add_btn text-white position-absolute">Add Task</button>
+                            </div>
+                            <p class="gray mb-2">Today’s tasks</p>
+                            <div class="d-flex justify-content-between align-items-center outline">
+                                <p class="fw-normal mb-0 text-dark">Learning Javascript</p>
+                                <div class="">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.5">
+                                            <path
+                                                d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20Z"
+                                                fill="black" />
+                                            <path
+                                                d="M9.99909 13.587L7.70009 11.292L6.28809 12.708L10.0011 16.413L16.7071 9.70697L15.2931 8.29297L9.99909 13.587Z"
+                                                fill="black" />
+                                        </g>
+                                    </svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.5">
+                                            <path
+                                                d="M5 20C5 20.5304 5.21071 21.0391 5.58579 21.4142C5.96086 21.7893 6.46957 22 7 22H17C17.5304 22 18.0391 21.7893 18.4142 21.4142C18.7893 21.0391 19 20.5304 19 20V8H21V6H17V4C17 3.46957 16.7893 2.96086 16.4142 2.58579C16.0391 2.21071 15.5304 2 15 2H9C8.46957 2 7.96086 2.21071 7.58579 2.58579C7.21071 2.96086 7 3.46957 7 4V6H3V8H5V20ZM9 4H15V6H9V4ZM8 8H17V20H7V8H8Z"
+                                                fill="black" />
+                                            <path d="M9 10H11V18H9V10ZM13 10H15V18H13V10Z" fill="black" />
+                                        </g>
+                                    </svg>
+                                </div>
+
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center outline">
+                                <p class="fw-normal mb-0 text-dark">Learning Javascript</p>
+                                <div class="">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.5">
+                                            <path
+                                                d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20Z"
+                                                fill="black" />
+                                            <path
+                                                d="M9.99909 13.587L7.70009 11.292L6.28809 12.708L10.0011 16.413L16.7071 9.70697L15.2931 8.29297L9.99909 13.587Z"
+                                                fill="black" />
+                                        </g>
+                                    </svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.5">
+                                            <path
+                                                d="M5 20C5 20.5304 5.21071 21.0391 5.58579 21.4142C5.96086 21.7893 6.46957 22 7 22H17C17.5304 22 18.0391 21.7893 18.4142 21.4142C18.7893 21.0391 19 20.5304 19 20V8H21V6H17V4C17 3.46957 16.7893 2.96086 16.4142 2.58579C16.0391 2.21071 15.5304 2 15 2H9C8.46957 2 7.96086 2.21071 7.58579 2.58579C7.21071 2.96086 7 3.46957 7 4V6H3V8H5V20ZM9 4H15V6H9V4ZM8 8H17V20H7V8H8Z"
+                                                fill="black" />
+                                            <path d="M9 10H11V18H9V10ZM13 10H15V18H13V10Z" fill="black" />
+                                        </g>
+                                    </svg>
+                                </div>
+
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center outline">
+                                <p class="fw-normal mb-0 text-dark">Learning Javascript</p>
+                                <div class="">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.5">
+                                            <path
+                                                d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20Z"
+                                                fill="black" />
+                                            <path
+                                                d="M9.99909 13.587L7.70009 11.292L6.28809 12.708L10.0011 16.413L16.7071 9.70697L15.2931 8.29297L9.99909 13.587Z"
+                                                fill="black" />
+                                        </g>
+                                    </svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.5">
+                                            <path
+                                                d="M5 20C5 20.5304 5.21071 21.0391 5.58579 21.4142C5.96086 21.7893 6.46957 22 7 22H17C17.5304 22 18.0391 21.7893 18.4142 21.4142C18.7893 21.0391 19 20.5304 19 20V8H21V6H17V4C17 3.46957 16.7893 2.96086 16.4142 2.58579C16.0391 2.21071 15.5304 2 15 2H9C8.46957 2 7.96086 2.21071 7.58579 2.58579C7.21071 2.96086 7 3.46957 7 4V6H3V8H5V20ZM9 4H15V6H9V4ZM8 8H17V20H7V8H8Z"
+                                                fill="black" />
+                                            <path d="M9 10H11V18H9V10ZM13 10H15V18H13V10Z" fill="black" />
+                                        </g>
+                                    </svg>
+                                </div>
+
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center outline">
+                                <p class="fw-normal mb-0 text-dark">Learning Javascript</p>
+                                <div class="">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.5">
+                                            <path
+                                                d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20Z"
+                                                fill="black" />
+                                            <path
+                                                d="M9.99909 13.587L7.70009 11.292L6.28809 12.708L10.0011 16.413L16.7071 9.70697L15.2931 8.29297L9.99909 13.587Z"
+                                                fill="black" />
+                                        </g>
+                                    </svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.5">
+                                            <path
+                                                d="M5 20C5 20.5304 5.21071 21.0391 5.58579 21.4142C5.96086 21.7893 6.46957 22 7 22H17C17.5304 22 18.0391 21.7893 18.4142 21.4142C18.7893 21.0391 19 20.5304 19 20V8H21V6H17V4C17 3.46957 16.7893 2.96086 16.4142 2.58579C16.0391 2.21071 15.5304 2 15 2H9C8.46957 2 7.96086 2.21071 7.58579 2.58579C7.21071 2.96086 7 3.46957 7 4V6H3V8H5V20ZM9 4H15V6H9V4ZM8 8H17V20H7V8H8Z"
+                                                fill="black" />
+                                            <path d="M9 10H11V18H9V10ZM13 10H15V18H13V10Z" fill="black" />
+                                        </g>
+                                    </svg>
+                                </div>
+
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center outline">
+                                <p class="fw-normal mb-0 text-dark">Learning Javascript</p>
+                                <div class="">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.5">
+                                            <path
+                                                d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20Z"
+                                                fill="black" />
+                                            <path
+                                                d="M9.99909 13.587L7.70009 11.292L6.28809 12.708L10.0011 16.413L16.7071 9.70697L15.2931 8.29297L9.99909 13.587Z"
+                                                fill="black" />
+                                        </g>
+                                    </svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.5">
+                                            <path
+                                                d="M5 20C5 20.5304 5.21071 21.0391 5.58579 21.4142C5.96086 21.7893 6.46957 22 7 22H17C17.5304 22 18.0391 21.7893 18.4142 21.4142C18.7893 21.0391 19 20.5304 19 20V8H21V6H17V4C17 3.46957 16.7893 2.96086 16.4142 2.58579C16.0391 2.21071 15.5304 2 15 2H9C8.46957 2 7.96086 2.21071 7.58579 2.58579C7.21071 2.96086 7 3.46957 7 4V6H3V8H5V20ZM9 4H15V6H9V4ZM8 8H17V20H7V8H8Z"
+                                                fill="black" />
+                                            <path d="M9 10H11V18H9V10ZM13 10H15V18H13V10Z" fill="black" />
+                                        </g>
+                                    </svg>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BOOTSTRAP-JS-LINK  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script>
+        const plus = document.getElementById("plus")
+        const second = document.getElementById("second")
+        const first = document.getElementById("first")
+        const zero = document.getElementById("zero")
+        let count = 0
+        console.log(first.value, "10")
+        plus.addEventListener("click", function () {
+            count.number(first + second)
+        })
+        zero.innerHTML = zero;
+
+    </script>
+</body>
+
+</html>
