@@ -86,22 +86,38 @@
         let count = 0
         function add() {
             count = Number(firstInput.value) + Number(secondInput.value);
-            answerInput.innerHTML = count
-            firstInput.value = ""
-            secondInput.value = ""
+
+            if (count > 0) {
+                answerInput.innerHTML = count
+                firstInput.value = ""
+                secondInput.value = ""
+            }
         }
         function minus() {
             count = Number(firstInput.value) - Number(secondInput.value);
-            answerInput.innerHTML = count
+            if (count > 0) {
+                answerInput.innerHTML = count
+                firstInput.value = ""
+                secondInput.value = ""
+            }
+
         }
         function multiple() {
             count = Number(firstInput.value) * Number(secondInput.value);
-            answerInput.innerHTML = count
+            if (count > 0) {
+                answerInput.innerHTML = count
+                firstInput.value = ""
+                secondInput.value = ""
+            }
 
         }
         function devide() {
             count = Number(firstInput.value) / Number(secondInput.value);
-            answerInput.innerHTML = count
+            if (count > 0) {
+                answerInput.innerHTML = count
+                firstInput.value = ""
+                secondInput.value = ""
+            }
 
         }
         function reset() {
