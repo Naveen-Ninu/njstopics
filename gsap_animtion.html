@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>gsap-animation</title>
+    <link rel="stylesheet" href="./assets/style/gsap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap');
+
+        body {
+            font-family: "Signika Negative", sans-serif;
+        }
+
+        .contents {
+            width: calc(100*200px);
+        }
+
+        .right {
+            width: calc(200*100px);
+        }
+
+        .image_top {
+            width: calc(200*100px);
+        }
+
+        .item {
+            height: 200px;
+            width: 200px;
+            background-color: rgb(71, 169, 255);
+            font-size: 16px;
+
+        }
+    </style>
+</head>
+
+<body class="p-0 m-0 fw-semibold">
+    <section class="vh-100"></section>
+    <section class="first last">
+        <div class=" overflow-hidden">
+            <h1 class=" text-center py-3 ">slider-left</h1>
+            <div class="contents d-flex">
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Naveen
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Rakesh
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Naveen Dhanda
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Sachin
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Aasish
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Anjali
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Iahu
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Vikram
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Keshav
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Aniket
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Naveen
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Rakesh
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Naveen Dhanda
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Sachin
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Aasish
+                </div>
+            </div>
+        </div>
+        <div class="overflow-hidden">
+            <h1 class=" text-center py-3 ">slider-right</h1>
+            <div class="right d-flex">
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Naveen
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Rakesh
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Naveen Dhanda
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Sachin
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Aasish
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Anjali
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Iahu
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Vikram
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Keshav
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Aniket
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Naveen
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Rakesh
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Naveen Dhanda
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Sachin
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Aasish
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="first last pb-5 mb-5">
+        <div class=" overflow-hidden">
+            <h1 class=" text-center py-3 ">slider-left</h1>
+            <div class="contents d-flex">
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Naveen
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Rakesh
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Naveen Dhanda
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Sachin
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Aasish
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Anjali
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Iahu
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Vikram
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Keshav
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Aniket
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Naveen
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Rakesh
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Naveen Dhanda
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Sachin
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Aasish
+                </div>
+            </div>
+        </div>
+        <div class="overflow-hidden">
+            <h1 class=" text-center py-3 ">slider-right</h1>
+            <div class="image_top d-flex">
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Naveen
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Rakesh
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Naveen Dhanda
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Sachin
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Aasish
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Anjali
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Iahu
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Vikram
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Keshav
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Aniket
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Naveen
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Rakesh
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Naveen Dhanda
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Sachin
+                </div>
+                <div class="item d-flex justify-content-center align-items-center text-white fw-bold p-2 mx-2">
+                    Aasish
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="first last vh-100">
+
+    </section>
+
+
+    <!------------------------------------------------------- bootstrap-link ----------------------------------------------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!------------------------------------------------------- g-sap links ----------------------------------------------------- -->
+    <script src="./assets/js/gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+        integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"
+        integrity="sha512-A64Nik4Ql7/W/PJk2RNOmVyC/Chobn5TY08CiKEX50Sdw+33WTOpPJ/63bfWPl0hxiRv1trPs5prKO8CpA7VNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // -------------------------------slider-left-------------------------------
+        window.addEventListener("load", () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            var pullContainerContents = gsap.to(".contents", {
+                x: -2600
+            }); //2600 being the total width of .contents
+
+            ScrollTrigger.create({
+                trigger: "section.first",
+                start: "top top",
+                endTrigger: "section.last",
+                end: "bottom top",
+                // scrub: true,
+                scrub: 0.5,
+                animation: pullContainerContents,
+            });
+        });
+
+        // -------------------------------slider-right-------------------------------
+        window.addEventListener("load", () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            var pullContainerContents = gsap.to(".right", {
+                x: 2600
+            });
+
+            ScrollTrigger.create({
+                trigger: "section.first",
+                start: "top top",
+                endTrigger: "section.last",
+                end: "bottom top",
+                scrub: 0.5,
+                animation: pullContainerContents,
+            });
+        });
+
+        // -------------------------------image-to-top-------------------------------
+        window.addEventListener("load", () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            var pullContainerContents = gsap.to(".image_top", {
+                y: 2600
+            });
+
+            ScrollTrigger.create({
+                trigger: "section.first",
+                endTrigger: "section.last",
+                end: "top top",
+                start: "bottom top",
+                scrub: 0.5,
+                animation: pullContainerContents,
+            });
+        });
+    </script>
+</body>
+
+
+
+</html>

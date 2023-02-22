@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- -Favicon-link  -->
+    <link rel="shortcut icon" href="./assets/images/png/js-logo.png" type="image/x-icon">
+    <!-- css-files link -->
+    <link rel="stylesheet" href="assets/style/common.css" />
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <!-- bootstrap-css-link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <title>Advance Calculator</title>
+    <style>
+        .advance_calculator_box {
+            width: 463px;
+            left: 490px;
+            top: 441px;
+            border-radius: 20px;
+            background: #ffffff;
+            box-shadow: 0px 11px 44px -10px rgba(0, 0, 0, 0.25);
+        }
+
+        .btn_outline {
+            border: 1px solid #128DFF;
+            border-radius: 4px;
+            padding: 15px 35px;
+            background: transparent;
+        }
+
+        .previews_stype {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .common_btn_bg {
+            background: linear-gradient(127.28deg, #EBEBEB 12.53%, #FFFFFF 86.52%);
+            border-radius: 3px;
+            width: 83px;
+            height: 77px;
+        }
+
+        .common_btn_bg:hover {
+            background: linear-gradient(97.42deg, #128DFF -4.95%, #1444EF 109.04%);
+        }
+
+        .common_btn_bg:hover button {
+            color: #FFFFFF !important;
+        }
+
+        .common_btn_bg:hover button svg path {
+            fill: #FFFFFF !important;
+        }
+
+        .equal_btn_bg:hover {
+            background: linear-gradient(97.42deg, #128DFF -4.95%, #1444EF 109.04%);
+        }
+
+        .equal_btn_bg:hover button {
+            color: #FFFFFF !important;
+        }
+
+        .equal_btn_bg {
+            background: linear-gradient(127.28deg, #EBEBEB 12.53%, #FFFFFF 86.52%);
+            border-radius: 3px;
+            width: 83px;
+            height: 154px;
+        }
+
+        .gray {
+            color: #808080;
+        }
+
+        .btn_num {
+            border: none;
+            background: transparent;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="d-flex vh-100">
+        <div class="container justify-content-center align-self-center">
+            <div class="row">
+                <div class="col-12 align-items-center">
+                    <h1 class="heading mb-4 pb-1">Advance Calculator</h1>
+                    <div class="advance_calculator_box m-auto p-4">
+                        <div class="previews_stype p-3 mb-2">
+                            <p id="result" class="counter text-start zero mb-0 mt-2"></p>
+                        </div>
+                        <div class="d-flex pt-3 flex-wrap">
+                            <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button id="seven" class="border-none btn_num gray">7</button>
+                            </div>
+                            <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button id="eight" class="border-none btn_num gray">8</button>
+                            </div>
+                            <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button id="nine" class="border-none btn_num gray">9</button>
+                            </div>
+                            <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button id="plus" class="border-none btn_num gray">+</button>
+                            </div>
+                            <!-- <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button id="" class="border-none btn_num gray">^</button>
+                            </div> -->
+                            <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button onclick="backspace()" class="border-none btn_num gray">
+                                    <svg width="21" height="17" viewBox="0 0 21 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.3 0.5H20.5V16.5H5.3L0.5 8.5L5.3 0.5Z" fill="#808080" />
+                                        <path
+                                            d="M11.7626 7.15065L13.977 3.5H15.9699L12.7038 8.44455L16.0714 13.5H14.097L11.7903 9.75693L9.4837 13.5H7.5L10.8677 8.44455L7.60149 3.5H9.57596L11.7626 7.15065Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button id="four" class="border-none btn_num gray w-100">4</button>
+                            </div>
+                            <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button id="five" class="border-none w-100 btn_num gray">5</button>
+                            </div>
+                            <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button id="six" class="border-none btn_num gray">6</button>
+                            </div>
+                            <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button id="minus" class="border-none btn_num gray">-</button>
+                            </div>
+                            <!-- <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button id="" class="border-none btn_num gray">1/X</button>
+                            </div> -->
+                            <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                <button onclick="reset()" class="border-none btn_num gray">C</button>
+
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="d-flex flex-wrap">
+                                <div class="d-flex justify-content-center align-content-center common_btn_bg"> <button
+                                        id="one" class="border-none btn_num gray">1</button>
+                                </div>
+                                <div class="d-flex justify-content-center align-content-center common_btn_bg"> <button
+                                        id="two" class="border-none btn_num gray">2</button>
+                                </div>
+                                <div class="d-flex justify-content-center align-content-center common_btn_bg"> <button
+                                        id="three" class="border-none btn_num gray">3</button>
+                                </div>
+                                <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                    <button id="multiple" class="border-none btn_num gray">*</button>
+                                </div>
+                                <!-- <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                    <button id="" class="border-none btn_num gray">%</button>
+                                </div> -->
+                                <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                    <button id="doublezero" class="border-none btn_num gray">00</button>
+                                </div>
+                                <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                    <button id="zero" class="border-none btn_num gray">0</button>
+                                </div>
+                                <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                    <button id="dash" class="border-none btn_num gray">.</button>
+                                </div>
+                                <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                    <button id="slash" class="border-none btn_num gray">/</button>
+                                </div>
+                                <!-- <div class="d-flex justify-content-center align-content-center common_btn_bg">
+                                    <button id="exclimation" class="border-none btn_num gray">!</button>
+                                </div> -->
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-center align-content-center equal_btn_bg">
+                                    <button id="total" class="border-none btn_num  gray">=</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOTSTRAP-JS-LINK  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        const plus = document.getElementById("plus");
+        const minus = document.getElementById("minus");
+        const devide = document.getElementById("devide");
+        const multiple = document.getElementById("multiple");
+        const total = document.getElementById("total");
+        const one = document.getElementById("one");
+        const two = document.getElementById("two");
+        const three = document.getElementById("three");
+        const four = document.getElementById("four");
+        const five = document.getElementById("five");
+        const six = document.getElementById("six");
+        const seven = document.getElementById("seven");
+        const eight = document.getElementById("eight");
+        const nine = document.getElementById("nine");
+        const zero = document.getElementById("zero");
+        const dash = document.getElementById("dash");
+        const doublezero = document.getElementById("doublezero");
+        const result = document.getElementById("result");
+
+        // let result-----------------------------------;
+        one.addEventListener("click", function () {
+            result.innerHTML += 1;
+        });
+        two.addEventListener("click", function () {
+            result.innerHTML += 2;
+        });
+        three.addEventListener("click", function () {
+            result.innerHTML += 3;
+        });
+        four.addEventListener("click", function () {
+            result.innerHTML += 4;
+        });
+        five.addEventListener("click", function () {
+            result.innerHTML += 5;
+        });
+        six.addEventListener("click", function () {
+            result.innerHTML += 6;
+        });
+        seven.addEventListener("click", function () {
+            result.innerHTML += 7;
+        });
+        eight.addEventListener("click", function () {
+            result.innerHTML += 8;
+        });
+        nine.addEventListener("click", function () {
+            result.innerHTML += 9;
+        });
+        zero.addEventListener("click", function () {
+            result.innerHTML += 0;
+        });
+        doublezero.addEventListener("click", function () {
+            result.innerHTML += 00;
+        });
+        dash.addEventListener("click", function () {
+            result.innerHTML += ".";
+        });
+
+        // pus/minus/devide/multiple-to code -----------------------
+        plus.addEventListener("click", function () {
+            result.innerHTML += "+";
+        });
+        minus.addEventListener("click", function () {
+            result.innerHTML += "-";
+        });
+        multiple.addEventListener("click", function () {
+            result.innerHTML += "*";
+        });
+        // devide.addEventListener("click", function () {
+        //     result.innerHTML += "/";
+        // });
+        // equal-to code -----------------------------------------
+        let value;
+        total.addEventListener("click", function () {
+            value = eval(result.innerHTML);
+            result.innerHTML = value;
+        });
+        function reset() {
+            result.innerHTML = ""
+        }
+        function backspace() {
+            result.innerHTML = value > ""
+        }
+    </script>
+</body>
+
+</html>
