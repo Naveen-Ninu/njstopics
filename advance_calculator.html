@@ -105,9 +105,6 @@
                             <div class="d-flex justify-content-center align-content-center common_btn_bg">
                                 <button id="plus" class="border-none btn_num gray">+</button>
                             </div>
-                            <!-- <div class="d-flex justify-content-center align-content-center common_btn_bg">
-                                <button id="" class="border-none btn_num gray">^</button>
-                            </div> -->
                             <div class="d-flex justify-content-center align-content-center common_btn_bg">
                                 <button onclick="backspace()" class="border-none btn_num gray">
                                     <svg width="21" height="17" viewBox="0 0 21 17" fill="none"
@@ -131,12 +128,8 @@
                             <div class="d-flex justify-content-center align-content-center common_btn_bg">
                                 <button id="minus" class="border-none btn_num gray">-</button>
                             </div>
-                            <!-- <div class="d-flex justify-content-center align-content-center common_btn_bg">
-                                <button id="" class="border-none btn_num gray">1/X</button>
-                            </div> -->
                             <div class="d-flex justify-content-center align-content-center common_btn_bg">
                                 <button onclick="reset()" class="border-none btn_num gray">C</button>
-
                             </div>
                         </div>
                         <div class="d-flex">
@@ -153,9 +146,6 @@
                                 <div class="d-flex justify-content-center align-content-center common_btn_bg">
                                     <button id="multiple" class="border-none btn_num gray">*</button>
                                 </div>
-                                <!-- <div class="d-flex justify-content-center align-content-center common_btn_bg">
-                                    <button id="" class="border-none btn_num gray">%</button>
-                                </div> -->
                                 <div class="d-flex justify-content-center align-content-center common_btn_bg">
                                     <button id="doublezero" class="border-none btn_num gray">00</button>
                                 </div>
@@ -166,22 +156,22 @@
                                     <button id="dash" class="border-none btn_num gray">.</button>
                                 </div>
                                 <div class="d-flex justify-content-center align-content-center common_btn_bg">
-                                    <button id="slash" class="border-none btn_num gray">/</button>
+                                    <button id="devide" class="border-none btn_num gray">/</button>
                                 </div>
-                                <!-- <div class="d-flex justify-content-center align-content-center common_btn_bg">
-                                    <button id="exclimation" class="border-none btn_num gray">!</button>
-                                </div> -->
                             </div>
                             <div>
                                 <div class="d-flex justify-content-center align-content-center equal_btn_bg">
                                     <button id="total" class="border-none btn_num  gray">=</button>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
     </section>
 
     <!-- BOOTSTRAP-JS-LINK  -->
@@ -191,24 +181,24 @@
 
 
     <script>
-        const plus = document.getElementById("plus");
-        const minus = document.getElementById("minus");
-        const devide = document.getElementById("devide");
-        const multiple = document.getElementById("multiple");
-        const total = document.getElementById("total");
-        const one = document.getElementById("one");
-        const two = document.getElementById("two");
-        const three = document.getElementById("three");
-        const four = document.getElementById("four");
-        const five = document.getElementById("five");
-        const six = document.getElementById("six");
-        const seven = document.getElementById("seven");
-        const eight = document.getElementById("eight");
-        const nine = document.getElementById("nine");
-        const zero = document.getElementById("zero");
-        const dash = document.getElementById("dash");
-        const doublezero = document.getElementById("doublezero");
-        const result = document.getElementById("result");
+        // const plus = document.getElementById("plus");
+        // const minus = document.getElementById("minus");
+        // const devide = document.getElementById("devide");
+        // const multiple = document.getElementById("multiple");
+        // const total = document.getElementById("total");
+        // const one = document.getElementById("one");
+        // const two = document.getElementById("two");
+        // const three = document.getElementById("three");
+        // const four = document.getElementById("four");
+        // const five = document.getElementById("five");
+        // const six = document.getElementById("six");
+        // const seven = document.getElementById("seven");
+        // const eight = document.getElementById("eight");
+        // const nine = document.getElementById("nine");
+        // const zero = document.getElementById("zero");
+        // const dash = document.getElementById("dash");
+        // const doublezero = document.getElementById("doublezero");
+        // const result = document.getElementById("result");
 
         // let result-----------------------------------;
         one.addEventListener("click", function () {
@@ -242,12 +232,11 @@
             result.innerHTML += 0;
         });
         doublezero.addEventListener("click", function () {
-            result.innerHTML += 00;
+            result.innerHTML += "00";
         });
         dash.addEventListener("click", function () {
             result.innerHTML += ".";
         });
-
         // pus/minus/devide/multiple-to code -----------------------
         plus.addEventListener("click", function () {
             result.innerHTML += "+";
@@ -258,21 +247,25 @@
         multiple.addEventListener("click", function () {
             result.innerHTML += "*";
         });
-        // devide.addEventListener("click", function () {
-        //     result.innerHTML += "/";
-        // });
+        devide.addEventListener("click", function () {
+            result.innerHTML += "/";
+        });
         // equal-to code -----------------------------------------
         let value;
         total.addEventListener("click", function () {
             value = eval(result.innerHTML);
             result.innerHTML = value;
         });
+        // reset-to code -----------------------------------------
         function reset() {
             result.innerHTML = ""
         }
+        // back-to code -----------------------------------------
         function backspace() {
-            result.innerHTML = value > ""
+            result.innerHTML = result.innerHTML.slice(0, -1);
         }
+        // if-else- code -----------------------------------------
+
     </script>
 </body>
 

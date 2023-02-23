@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>test</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            background-color: black;
+        }
+
+        .intro {
+            Color: white;
+            position: absolute;
+            top: -20%;
+            text-align: center;
+            font-size: 21px;
+        }
+
+
+        .button {
+            height: 46px;
+            width: 46px;
+            margin: 1px;
+            Font-size: 19px;
+            background: purple;
+            color: white;
+        }
+
+        .view {
+            font-size: 21px;
+            margin: 5px;
+            padding: 9px;
+            width: 182px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="intro">VATSA CALCULATOR</div>
+    <input class="view" type="text" id="txt">
+    <table>
+        <tr>
+            <td><input type="button" class="button" value="c" onclick="clean()"></td>
+            <td><input type="button" class="button" value="<" onclick="back()"></td>
+            <td><input type="button" class="button" value="/" onclick="button('/')"></td>
+            <td><input type="button" class="button" value="*" onclick="button('*')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="button" value="7" onclick="button(7)"></td>
+            <td><input type="button" class="button" value="8" onclick="button(8)"></td>
+            <td><input type="button" class="button" value="9" onclick="button(9)"></td>
+            <td><input type="button" class="button" value="-" onclick="button('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="button" value="4" onclick="button(4)"></td>
+            <td><input type="button" class="button" value="5" onclick="button(5)"></td>
+            <td><input type="button" class="button" value="6" onclick="button(6)"></td>
+            <td><input type="button" class="button" value="+" onclick="button('+')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="button" value="1" onclick="button(1)"></td>
+            <td><input type="button" class="button" value="2" onclick="button(2)"></td>
+            <td><input type="button" class="button" value="3" onclick="button(3)"></td>
+            <td rowspan="2"><input type="button" class="button" style="height:100px" value="=" onclick="equal()"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="button" class="button" style="width:100px" value="0" onclick="button(0)"></td>
+            <td><input type="button" class="button" value="." onclick="button('.')"></td>
+        </tr>
+    </table>
+    <script>
+
+        function button(num) {
+            document.getElementById("txt").value = document.getElementById("txt").value + num;
+        }
+
+        function clean() {
+            document.getElementById("txt").value = "";
+        }
+
+        function equal() {
+            var exp = document.getElementById("txt").value;
+            if (exp) {
+                document.getElementById("txt").value = eval(exp);
+            }
+        }
+
+        function back() {
+            var txt = document.getElementById("txt").value;
+            txt = txt.slice(0, -1);
+            document.getElementById("txt").value = txt;
+        }
+    </script>
+</body>
+
+</html>
