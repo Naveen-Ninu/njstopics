@@ -18,6 +18,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;500;600;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+        @import url("https://fonts.googleapis.com/css?family=Lobster");
+        @import url("https://fonts.googleapis.com/css?family=Chewy");
+
 
         .gray {
             color: #808080 !important;
@@ -48,6 +51,14 @@
         .playball {
             font-family: 'Playball', cursive;
         }
+
+        .Lobster {
+            font-family: 'Lobster';
+        }
+
+        .Chewy {
+            font-family: 'Chewy';
+        }
     </style>
 </head>
 
@@ -70,30 +81,30 @@
                             </select>
                             <select id="select_size" class="form-select p-3 my-1" aria-label="Default select example">
                                 <option selected class="gray">Select font size</option>
-                                <option value="10px">10px</option>
-                                <option value="20px">20px</option>
-                                <option value="30px">30px</option>
+                                <option value="10px">10</option>
+                                <option value="20px">20</option>
+                                <option value="30px">30</option>
                             </select>
                             <select id="select_alignment" class="form-select p-3 " aria-label="Default select example">
                                 <option selected class="gray">Select alignment</option>
-                                <option value="right">right</option>
-                                <option value="center">center</option>
-                                <option value="left">left</option>
+                                <option value="right">Right</option>
+                                <option value="center">Center</option>
+                                <option value="left">Left</option>
                             </select>
                             <select id="select_font_family" class="form-select p-3 my-1"
                                 aria-label="Default select example">
                                 <option selected class="gray">Select font family</option>
-                                <option value="Shantell,'Sans'">Shantell Sans</option>
-                                <option value="Raleway">Raleway</option>
-                                <option value="Playball,'cursive'">Playball cursive</option>
+                                <option value="Playball">Playball</option>
+                                <option value="Lobster">Lobster</option>
+                                <option value="Chewy">Chewy</option>
                             </select>
                             <select id="select_decoration" class="form-select p-3 mt-1  "
                                 aria-label="Default select example">
                                 <option selected class="gray">Select text decoration
                                 </option>
-                                <option value="overline">overline</option>
-                                <option value="underline">underline</option>
-                                <option value="line-through">line-through</option>
+                                <option value="overline">Overline</option>
+                                <option value="underline">Underline</option>
+                                <option value="line-through">Line-through</option>
                             </select>
                             <select id="select_fw" class="form-select p-3 mt-1" aria-label="Default select example">
                                 <option selected class="gray">Select font weight</option>
@@ -108,7 +119,6 @@
             </div>
         </div>
     </section>
-    <div class="text-center text-decoration-underline">heloiuygtfvghjtfrghjughjuygtb</div>
 
     <!-- BOOTSTRAP-JS-LINK  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
@@ -127,9 +137,10 @@
         select_alignment.addEventListener("click", function () {
             text_show.style.textAlign = select_alignment.value
         })
-        // select_font_family.addEventListener("click", function () {
-        //     text_show.style.fontFamily = select_font_family.value
-        // })
+        select_font_family.addEventListener("click", function () {
+            text_show.style.fontFamily = select_font_family.value
+            // console.log(text_show, "ghjnk");
+        })
         select_decoration.addEventListener("click", function () {
             text_show.style.textDecoration = select_decoration.value
         })

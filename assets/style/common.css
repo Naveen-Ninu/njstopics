@@ -4,8 +4,8 @@
     padding: 0px;
     margin: 0px;
     list-style-type: none;
-    text-decoration: none !important;
-    font-family: 'Inter', sans-serif !important;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
 }
 
 :root {
